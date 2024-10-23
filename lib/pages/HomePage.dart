@@ -61,7 +61,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _addNewTransaction(Map<String, dynamic> transaction) {
-    // Validación de los datos antes de agregarlos
     final String? category = transaction['category'] as String?;
     final String? date = transaction['date'] as String?;
     final double? amount = transaction['amount'] as double?;
@@ -183,6 +182,7 @@ class _HomePageState extends State<HomePage> {
                     if (_hoveredKey == key)
                       Positioned(
                         right: 5,
+                        top: 5,
                         child: Container(
                           decoration: BoxDecoration(
                             color: const Color.fromARGB(244, 244, 67, 54),
@@ -200,6 +200,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 80.0)
                   ],
                 ),
               );

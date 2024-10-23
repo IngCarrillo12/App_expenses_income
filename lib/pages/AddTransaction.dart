@@ -110,14 +110,21 @@ class _AddTransactionPage extends State<AddTransactionPage> {
                     const SizedBox(height: 20),
                     TextField(
                       controller: _categoryController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: 'Ingresar categoría',
                         hintText: 'Electricidad',
                         filled: true,
                         fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.blue, width: 3.0),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                         floatingLabelStyle: const TextStyle(color: Colors.blue)
+
+                          
                       ),
                     ),
 
@@ -139,6 +146,14 @@ class _AddTransactionPage extends State<AddTransactionPage> {
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.blue, width: 3.0),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                         floatingLabelStyle: const TextStyle(color: Colors.blue)
                       ),
                       keyboardType: TextInputType.number,
                       inputFormatters: [
@@ -163,6 +178,14 @@ class _AddTransactionPage extends State<AddTransactionPage> {
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.blue, width: 3.0),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                         floatingLabelStyle: const TextStyle(color: Colors.blue)
                       ),
                       onTap: () {
                         _selectDate(context);
@@ -207,8 +230,9 @@ class _AddTransactionPage extends State<AddTransactionPage> {
                     ),
 
                     const SizedBox(height: 20),
-
-                    ElevatedButton(
+                      Center(
+                    child:  ElevatedButton(
+                      
                       onPressed: () {
                         if (_validateFields()) {
                           final double amount = double.tryParse(_amountController.text) ?? 0.0;
@@ -230,7 +254,14 @@ class _AddTransactionPage extends State<AddTransactionPage> {
                           );
                         }
                       },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        
+                      ),
                       child: const Text('Agregar Transacción'),
+                    ),
                     ),
                   ],
                 ),

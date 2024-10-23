@@ -23,9 +23,9 @@ class AppBarContent extends StatelessWidget {
                   title,
                   style: const TextStyle(color: Colors.white, fontSize: 24, shadows: [
                   Shadow(
-                    offset: Offset(2.0, 4.0), // Desplazamiento de la sombra (x, y)
-                    blurRadius: 3.0, // Desenfoque de la sombra
-                    color:  Colors.white, // Color y opacidad de la sombra
+                    offset: Offset(2.0, 4.0), 
+                    blurRadius: 3.0,
+                    color:  Colors.white, 
                   ),
                     ],
                     ),
@@ -35,9 +35,9 @@ class AppBarContent extends StatelessWidget {
                   subtitle,
                   style: const TextStyle(color: Colors.white, fontSize: 18, shadows: [
                   Shadow(
-                    offset: Offset(2.0, 4.0), // Desplazamiento de la sombra (x, y)
-                    blurRadius: 3.0, // Desenfoque de la sombra
-                    color:  Colors.white, // Color y opacidad de la sombra
+                    offset: Offset(2.0, 4.0), 
+                    blurRadius: 3.0,
+                    color:  Colors.white,
                   ),
                     ],),
                 ),
